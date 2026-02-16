@@ -15,14 +15,12 @@ import type {
   TestimonialsType,
   ToolsType,
 } from '@/types';
-import { link } from 'fs';
 
 /**
  * Assets
  */
 import {
   Briefcase,
-  Facebook,
   FileText,
   Globe,
   Home,
@@ -33,11 +31,9 @@ import {
   MessageCircle,
   Palette,
   Rocket,
-  Settings,
   Smartphone,
   Twitter,
   User,
-  Youtube,
 } from 'lucide-react';
 
 const navLinks: LinksType[] = [
