@@ -58,7 +58,7 @@ const socialLinks: LinksType[] = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/david-santiago-027085243/',
+    link: 'https://www.linkedin.com/in/ldavidsantiago/',
   },
   {
     icon: Instagram,
@@ -68,7 +68,7 @@ const socialLinks: LinksType[] = [
   {
     icon: Twitter,
     label: 'Twitter',
-    link: '/#',
+    link: 'https://x.com/lDavidSantiago',
   },
 ];
 
