@@ -35,9 +35,14 @@ import { navLinks, socialLinks } from '@/constants';
 
 export const Sidebar = () => {
   const [active, setActive] = useState('#hero');
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      <Sheet>
+      <Sheet
+        open={open}
+        onOpenChange={setOpen}
+      >
         <SheetTrigger asChild>
           <Button
             variant='ghost'
@@ -60,7 +65,10 @@ export const Sidebar = () => {
                 <a
                   href={link.link}
                   key={link.link}
-                  onClick={() => setActive(link.link)}
+                  onClick={() => {
+                    setActive(link.link);
+                    setOpen(false);
+                  }}
                   className={cn(
                     'text-neutral-300 flex items-center gap-2 hover:text-primary transition-colors duration-200 text-base',
                     active === link.link && 'text-primary',

@@ -18,6 +18,7 @@ import { fadeUp } from '@/lib/animations';
  * Types
  */
 import type { ProjectType } from '@/types';
+import { useState } from 'react';
 
 export const ProyectCard = ({
   imgSrc,
@@ -27,12 +28,19 @@ export const ProyectCard = ({
   description,
   liveLink,
 }: ProjectType) => {
+  const isTouchDevice =
+    typeof window !== 'undefined' &&
+    ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  const [open, setOpen] = useState(false);
+
   return (
     <motion.div
       variants={fadeUp}
       className='relative '
     >
       <HoverCard
+        open={isTouchDevice ? open : undefined}
+        onOpenChange={isTouchDevice ? setOpen : undefined}
         openDelay={10}
         closeDelay={150}
       >
@@ -42,6 +50,9 @@ export const ProyectCard = ({
               src={imgSrc}
               alt={title}
               className='rounded-md transition duration-500  w-full h-full object-cover'
+              onClick={() => {
+                if (isTouchDevice) setOpen((prev) => !prev);
+              }}
             />
           </figure>
         </HoverCardTrigger>

@@ -31,7 +31,7 @@ export const Stats = () => {
           rounded-xl flex justify-center items-center
           flex-col py-6'
         >
-          <p className='text-4xl capitalize font-bold lining-nums'>
+          <p className='text-2xl sm:text-3xl capitalize font-bold lining-nums'>
             {stats.number}
           </p>
           <p className=''>{stats.label}</p>

@@ -14,9 +14,13 @@ export const Profile = () => {
   return (
     <aside className='max-w-3xl border m-6 border-neutral-600 bg-neutral-900 text-white p-6 rounded-lg lg:sticky lg:left-0 lg:top-6 lg:w-96'>
       <div className='flex flex-col gap-4'>
-        <div className='flex items-center justify-between gap-x-20'>
-          <h1 className='text-2xl font-bold'>David Santiago</h1>
-          <h1 className='text-2xl font-bold'>Software Engineer</h1>
+        <div className='flex items-center justify-between gap-x-20 md:gap-x-10'>
+          <h1 className='text-base sm:text-xl md:text-2xl font-bold'>
+            David Santiago
+          </h1>
+          <h1 className='text-sm sm:text-lg md:text-xl font-bold'>
+            Software Engineer
+          </h1>
         </div>
         <img
           src='/pfp.jpg'

@@ -9,6 +9,14 @@ import Squares from '@/components/Squares.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <div className='fixed bottom-4 right-4 bg-black text-white p-2 rounded z-50'>
+      <span className='sm:hidden'>Mobile</span>
+      <span className='hidden sm:block md:hidden'>SM (≥640px)</span>
+      <span className='hidden md:block lg:hidden'>MD (≥768px)</span>
+      <span className='hidden lg:block xl:hidden'>LG (≥1024px)</span>
+      <span className='hidden xl:block 2xl:hidden'>XL (≥1280px)</span>
+      <span className='hidden 2xl:block'>2XL (≥1536px)</span>
+    </div>
     <div className='relative min-h-screen'>
       {/* Background */}
       <div className='absolute inset-0 -z-10'>
