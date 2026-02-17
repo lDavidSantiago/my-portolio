@@ -48,14 +48,14 @@ export const Sidebar = () => {
             variant='ghost'
             size='icon'
             className='m-4 fixed top-4 right-4 z-50 border-2 hover:border-primary bg-neutral-800
-             py-5 px-5 rounded-full hover:text-primary cursor-pointer'
+             py-5 px-5 rounded-full hover:text-primary cursor-pointer lg:hidden'
           >
             <MenuIcon size={30} />
           </Button>
         </SheetTrigger>
         <SheetContent
           side='right'
-          className='w-84 bg-neutral-900 text-white py-6 pl-10'
+          className='w-84 bg-neutral-900 text-white py-6 pl-10 '
         >
           <SheetTitle className='text-lg font-semibold'>Menu</SheetTitle>
           <nav className='flex flex-col gap-4'>
